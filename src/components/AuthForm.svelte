@@ -16,8 +16,8 @@
     <input type="password" bind:value={password} placeholder="Confirm password">
     <button>Log in</button>
     <div class="error">{error}</div>
-    <div>Don't have an account? <a href="www.gamerhash.com">Register</a></div>
-    <div>Forgot your password? <a href="www.gamerhash.com">Click here</a> to reset</div>
+    <div>Don't have an account? <a rel="external" href="http://www.gamerhash.com">Register</a></div>
+    <div>Forgot your password? <a rel="external" href="http://www.gamerhash.com">Click here</a> to reset</div>
   </form>
 </template>
 
@@ -33,17 +33,18 @@
       border: 1px solid var(--color-silver);
       padding: 1rem 1.7rem;
       margin: .5rem 0;
+      border-radius: .3rem;
     }
     button {
       font: var(--font-regular-medium);
       color: var(--color-alabaster);
       background: var(--color-shamrock);
       box-shadow: -.5rem -.5rem 1rem var(--color-hintofgreen);
+      border-radius: .3rem;
       padding: 1.25rem;
       margin: 1.5rem 0;
       display: grid;
       place-items: center;
-      cursor: pointer;
     }
     .error {
       color: var(--color-crimson);
