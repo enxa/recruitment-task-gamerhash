@@ -33,6 +33,9 @@
 	--font-large-bold: 700 3.2rem/4.1rem 'Rajdhani', sans-serif;
 	--font-ample-bold: 700 3.6rem/4.0rem 'Rajdhani', sans-serif;
 	--font-huge-bold: 700 50rem/9.0rem 'Rajdhani', sans-serif;
+
+	--gradient-radial-dark: radial-gradient(closest-side at 50% 48%, var(--color-shark) 0%, var(--color-woodsmoke2) 100%) 0% 0% no-repeat padding-box;
+	--gradient-linear-dark: linear-gradient(90deg, var(--color-woodsmoke2) 0%, var(--color-shark) 50%, var(--color-woodsmoke2) 100%);
 }
 *,
 *::after,
