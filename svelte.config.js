@@ -22,7 +22,6 @@ const config = {
         alias: {
           $animations: path.resolve("./src/animations"),
           $components: path.resolve("./src/components"),
-          $lib: path.resolve("./src/lib")
         }
       }
     }
