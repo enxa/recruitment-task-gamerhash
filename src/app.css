@@ -82,6 +82,22 @@ input, button {
 textarea {
 	white-space: revert;
 }
+button {
+	cursor: pointer;
+}
 button:focus:not(:focus-visible) {
   outline: none;
 }
+@media (min-width: 0px)    { .rim { padding: 0 calc(100vw/60) } }
+@media (min-width: 320px)  { .rim { padding: 0 calc(100vw/48) } }
+@media (min-width: 640px)  { .rim { padding: 0 calc(100vw/36) } }
+@media (min-width: 960px)  { .rim { padding: 0 calc(100vw/24) } }
+@media (min-width: 1280px) { .rim { padding: 0 calc(100vw/12) } }
+@media (min-width: 1600px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 1920px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 2240px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 2560px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 2880px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 3200px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 3520px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 3840px) { .rim { padding: 0 calc(100vw/6) } }

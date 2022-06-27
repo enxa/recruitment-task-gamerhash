@@ -1,11 +1,12 @@
 <script lang="ts">
-  export let isOpen: boolean = true
+  import { modalIsOpen } from '../app.js'
+  
   export let modalTitle: string = ""
 </script>
 
 <template>
-  {#if isOpen}
-    <section class="modal-outer" on:click|self={() => isOpen = false}>
+  {#if $modalIsOpen}
+    <section class="modal-outer" on:click|self={() => $modalIsOpen = false}>
       <div>
         <h3>{modalTitle}</h3>
         <div class="modal-inner">
