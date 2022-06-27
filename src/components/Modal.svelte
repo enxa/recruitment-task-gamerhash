@@ -1,19 +1,23 @@
 <script lang="ts">
   export let isOpen: boolean = true
+  export let modalTitle: string = ""
 </script>
 
 <template>
   {#if isOpen}
-    <section class="modal">
+    <section class="modal-outer" on:click|self={() => isOpen = false}>
       <div>
-        <slot />
+        <h3>{modalTitle}</h3>
+        <div class="modal-inner">
+          <slot />
+        </div>
       </div>
     </section>
   {/if}
 </template>
 
 <style lang="scss">
-  .modal {
+  .modal-outer {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,9 +26,15 @@
     background: rgba(23, 26, 31, .75);
     display: grid;
     place-items: center;
-    div {
+    h3 {
+      font: var(--font-large-semibold);
+      color: var(--color-alabaster);
+      text-align: center;
+    }
+    .modal-inner {
       background: var(--color-alabaster);
       padding: 2rem;
+      margin: 2rem;
       border-radius: 1rem;
     }
   }
