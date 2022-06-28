@@ -25,3 +25,8 @@ export const gamercoinSection = writable({
   body: 'GamerCoin is a token of GamerHash platform - it\'s the last puzzle of gaming ecosystem and fuel which makes 500.00 users life easier. Gamers will have many ways to earn GHX trough mining or entertainment on the platform. Keeping tokens in the wallet will bring many benefits & spending GHX in the Marketplace will open special offers',
   subheader: 'It\'s a game changer for gaming generation!'
 })
+
+export const wallet = writable({
+  coinName: 'GAMERCOIN (GHX)',
+  coinToken: '0x728f30fa2f100742c7949d1961804fa8e0b1387d'
+})
