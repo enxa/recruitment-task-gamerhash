@@ -5,6 +5,7 @@
   import Header from '$components/Header.svelte'
   import Main from '$components/Main.svelte'
   import Wallet from '$components/Wallet.svelte'
+  import CryptoSelect from '$components/CryptoSelect.svelte'
 </script>
 
 <template>
@@ -13,7 +14,12 @@
   </Header>
 
   <Main>
-    <Wallet />
+    <section slot="wallet">
+      <Wallet />
+    </section>
+    <section slot="crypto">
+      <CryptoSelect />
+    </section>
   </Main>
 
   <Modal modalTitle="Log In">

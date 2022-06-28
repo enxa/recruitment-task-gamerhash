@@ -38,8 +38,8 @@
 
 <style lang="scss">
   .wallet {
-    box-shadow: 0rem 0rem 2rem var(--color-woodsmoke2);
     background: var(--color-woodsmoke2);
+    box-shadow: 0rem 0rem 2rem var(--color-woodsmoke2);
     border-radius: 1rem;
     .token {
       background: var(--color-shark2);
