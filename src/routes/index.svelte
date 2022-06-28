@@ -4,6 +4,7 @@
   import Navbar from '$components/Navbar.svelte'
   import Header from '$components/Header.svelte'
   import Main from '$components/Main.svelte'
+  import Wallet from '$components/Wallet.svelte'
 </script>
 
 <template>
@@ -11,7 +12,9 @@
     <Navbar />
   </Header>
 
-  <Main />
+  <Main>
+    <Wallet />
+  </Main>
 
   <Modal modalTitle="Log In">
     <AuthForm />
