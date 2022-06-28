@@ -23,7 +23,9 @@
         </a>
       </div>
       <div class="arrow">
-        <img src="/images/arrow.svg" alt="arrow pointing down">
+        <a href="#main-content">
+          <img src="/images/arrow.svg" alt="arrow pointing down">
+        </a>
       </div>
     </section>
   </header>
@@ -32,16 +34,25 @@
 <style lang="scss">
   header {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: var(--color-woodsmoke2);
     display: grid;
     align-items: center;
     section {
       background: var(--gradient-radial-dark);
+      transform: translateY(10rem);
       .title {
         transform: scale(1.1);
         display: grid;
         place-items: center;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 70%;
+          height: 70%;
+          transform: translate(8%, -70%);
+          background: url('/images/astro.png') no-repeat top right / contain;
+        }
         img {
           width: 80vw;
           max-height: 40vh;
@@ -67,7 +78,7 @@
       }
       .subtitle {
         a {
-          color: var(--color-alabaster);
+          color: var(--color-dovegray);
           text-align: center;
           h6 {
             font-size: 2rem;
@@ -81,7 +92,9 @@
         img {
           width: 2rem;
           height: 1rem;
-          transform: translateY(5rem);
+          @media (min-width: 1600px) {
+            transform: translateY(5rem);
+          }
         }
       }
     }
