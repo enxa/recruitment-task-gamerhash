@@ -56,7 +56,7 @@ html {
 body {
 	font: var(--font-regular-medium);
 	color: var(--color-dovegray);
-	background-color: var(--color-white);
+	background-color: var(--color-alabaster);
 }
 
 h1 { font: var(--font-huge-bold); }

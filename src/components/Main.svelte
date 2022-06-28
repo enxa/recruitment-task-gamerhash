@@ -5,7 +5,7 @@
 <template>
   <main id="main-content" class="rim">
     <section class="wallet">
-      <slot />
+      <slot name="wallet" />
     </section>
     <section class="gamercoin">
       <h2>{$gamercoinSection.header}</h2>
@@ -16,6 +16,7 @@
       <h2>{$gamercoinSection.header}</h2>
       <p>{$gamercoinSection.body}</p>
       <h5>{$gamercoinSection.subheader}</h5>
+      <slot name="crypto" />
     </section>
   </main>
 </template>
@@ -48,13 +49,12 @@
       }
     }
     .gamercoin {
-      // transform: translate(0, -9rem);
       @media (min-width: 640px) {
-        // transform: translate(0, 9rem);
         grid-column: 7/13;
       }
     }
     .crypto {
+      text-align: center;
       @media (min-width: 640px) {
         grid-column: 1/13;
       }

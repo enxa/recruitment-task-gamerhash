@@ -30,3 +30,29 @@ export const wallet = writable({
   coinName: 'GAMERCOIN (GHX)',
   coinToken: '0x728f30fa2f100742c7949d1961804fa8e0b1387d'
 })
+
+export const crypto = writable([
+  {
+    name: 'Bitcoin',
+    currencyCode: 'BTN',
+    valueBTC: 0.48,
+    valueUSD: 3925.36,
+    icon: '/images/btc-icon.svg'
+  },
+  {
+    name: 'Ethereum',
+    currencyCode: 'ETH',
+    valueBTC: 0.48,
+    valueUSD: 3925.36,
+    icon: '/images/etc-icon.svg'
+  },
+  {
+    name: 'Lite Coin',
+    currencyCode: 'LTC',
+    valueBTC: 0.48,
+    valueUSD: 3925.36,
+    icon: '/images/ltc-icon.svg'
+  }
+])
+
+export const cryptoSelectIsOpen = writable(false)
