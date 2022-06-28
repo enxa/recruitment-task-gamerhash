@@ -5,13 +5,12 @@
   import Header from '$components/Header.svelte'
 </script>
 
-<Modal modalTitle="Log In">
-  <AuthForm />
-</Modal>
-
-
 <template>
   <Header>
     <Navbar />
   </Header>
+
+  <Modal modalTitle="Log In">
+    <AuthForm />
+  </Modal>  
 </template>
