@@ -56,3 +56,26 @@ export const crypto = writable([
 ])
 
 export const cryptoSelectIsOpen = writable(false)
+
+export const devices = writable([
+  {
+    name: 'low-end',
+    value: 9004.21,
+    icon: '/images/low-end.svg',
+  },
+  {
+    name: 'mid-shelf',
+    value: 9004.21,
+    icon: '/images/mid-shelf.svg',
+  },
+  {
+    name: 'high-end',
+    value: 9004.21,
+    icon: '/images/high-end.svg',
+  },
+  {
+    name: '7x GPU',
+    value: 9004.21,
+    icon: '/images/7xGPU.svg',
+  },
+])

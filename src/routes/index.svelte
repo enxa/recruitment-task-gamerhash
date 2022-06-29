@@ -6,6 +6,7 @@
   import Main from '$components/Main.svelte'
   import Wallet from '$components/Wallet.svelte'
   import CryptoSelect from '$components/CryptoSelect.svelte'
+  import ProfitCalculator from '$components/ProfitCalculator.svelte'
 </script>
 
 <template>
@@ -21,6 +22,8 @@
       <CryptoSelect />
     </section>
   </Main>
+
+  <ProfitCalculator />
 
   <Modal modalTitle="Log In">
     <AuthForm />
