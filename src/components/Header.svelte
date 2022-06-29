@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { headerLinks } from '../app'
+  import { headerLinks } from '../app.js'
+  import { animateInViewport } from '../animations/animateInViewport.js'
 </script>
 
 <template>
@@ -11,13 +12,13 @@
         {#each $headerLinks as link}
           <a rel="external" href={link.url}>
             <img src={link.icon} alt={link.name}>
-            <h3>{link.name}</h3>
+            <h3 use:animateInViewport>{link.name}</h3>
           </a>
         {/each}
       </div>
       <div class="subtitle">
         <a rel="external" href="http://www.gamerhash.com">
-          <h6>What can I do with earned funds?</h6>
+          <h6 use:animateInViewport>What can I do with earned funds?</h6>
         </a>
       </div>
       <div class="arrow">

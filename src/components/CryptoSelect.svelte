@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { slide } from 'svelte/transition'
   import { clickOutside } from '../lib/clickOutside.js'
   import { crypto, cryptoSelectIsOpen } from '../app.js'
 
@@ -38,7 +39,7 @@
     
       {#if $cryptoSelectIsOpen}
         {#each $crypto as currency}
-          <div class="option" on:click={() => clickOption(currency)}>
+          <div class="option" on:click={() => clickOption(currency)} transition:slide>
             <div>
               <div class="icon"><img src={currency.icon} alt="{currency.name} icon"></div>
               <div class="name"><h6>{currency.name}</h6></div>
@@ -67,11 +68,11 @@
       position: absolute;
       border-radius: .3rem;
       background: var(--color-white);
-      // box-shadow: 0rem .2rem 1rem var(--color-silver);
+      transition: .4s all ease-in-out;
       .selected {
         border: 1px solid var(--color-silver);
         border-radius: .3rem;
-        transition: .4s ease-in-out;
+        transition: .4s border ease-in-out;
         &:hover {
           border: 1px solid var(--color-shark);
         }
@@ -87,6 +88,7 @@
         align-items: center;
         border-radius: .3rem;
         color: var(--color-shark);
+        transition: .4s background ease-in-out;
         &:hover {
           background: var(--color-silver);
         }

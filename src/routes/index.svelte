@@ -1,4 +1,6 @@
 <script>
+  import { smoothSite } from '$animations/smoothSite.js'
+
   import Modal from '$components/Modal.svelte'
   import AuthForm from '$components/AuthForm.svelte'
   import Navbar from '$components/Navbar.svelte'
@@ -10,20 +12,21 @@
 </script>
 
 <template>
-  <Header>
-    <Navbar />
-  </Header>
+  <Navbar />
+  <main use:smoothSite>
+    <Header/>
 
-  <Main>
-    <section slot="wallet">
-      <Wallet />
-    </section>
-    <section slot="crypto">
-      <CryptoSelect />
-    </section>
-  </Main>
+    <Main>
+      <section slot="wallet">
+        <Wallet />
+      </section>
+      <section slot="crypto">
+        <CryptoSelect />
+      </section>
+    </Main>
 
-  <ProfitCalculator />
+    <ProfitCalculator />
+  </main>
 
   <Modal modalTitle="Log In">
     <AuthForm />

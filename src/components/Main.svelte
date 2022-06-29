@@ -1,5 +1,6 @@
 <script lang="ts">
   import { gamercoinSection } from '../app'
+  import { animateInViewport } from '../animations/animateInViewport.js'
 </script>
 
 <template>
@@ -8,14 +9,14 @@
       <slot name="wallet" />
     </section>
     <section class="gamercoin">
-      <h2>{$gamercoinSection.header}</h2>
-      <p>{@html $gamercoinSection.body}</p>
-      <h5>{$gamercoinSection.subheader}</h5>
+      <h2 use:animateInViewport>{$gamercoinSection.header}</h2>
+      <p use:animateInViewport>{@html $gamercoinSection.body}</p>
+      <h5 use:animateInViewport>{$gamercoinSection.subheader}</h5>
     </section>
     <section class="crypto">
-      <h2>{$gamercoinSection.header}</h2>
-      <p>{@html $gamercoinSection.body}</p>
-      <h5>{$gamercoinSection.subheader}</h5>
+      <h2 use:animateInViewport>{$gamercoinSection.header}</h2>
+      <p use:animateInViewport>{@html $gamercoinSection.body}</p>
+      <h5 use:animateInViewport>{$gamercoinSection.subheader}</h5>
       <slot name="crypto" />
     </section>
   </main>
