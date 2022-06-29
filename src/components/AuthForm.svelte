@@ -4,18 +4,46 @@
   let emailOrLogin: string = ''
   let password: string = ''
   let error: string = ''
+  let url: string = 'http://dom.elo/api/auth'
 
   let handleSubmit = (): void => {
-    if (emailOrLogin == '') error = "Please write your email or login"
-    if (password == '') error = "Please write your password"
-    if (emailOrLogin == '' && password == '') error ='Please write your credencials'
-  } 
+    if (emailOrLogin == '' && password == '') {
+      error ='Please provide your credencials'
+      return
+    } else if (emailOrLogin == '') {
+      error = "Please provide your email or login"
+      return
+    } else if (password == '') {
+      error = "Please provide your password"
+    } else if (emailOrLogin.length < 6) {
+      error = "Your email or login cannot be less than 6 characters"
+      return
+    } else if (password.length < 6) {
+      error = "Your password cannot be less than 6 characters"
+      return
+    }
+
+    fetchData(url)
+  }
+
+  let fetchData = async (url: string): Promise<any> => {
+    let response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({emailOrLogin, password})
+    })
+    let result = response.json()
+    console.log(result)
+  }
 </script>
 
 <template>
   <form class="auth-form" on:submit|preventDefault={handleSubmit}>
-    <input type="text" bind:value={emailOrLogin} placeholder="Your email or login" required>
-    <input type="password" bind:value={password} placeholder="Confirm password" required>
+    <input type="text" bind:value={emailOrLogin} placeholder="Your email or login">
+    <input type="password" bind:value={password} placeholder="Confirm password">
     <button>Log in</button>
     {#if error}
       <div class="error" transition:slide>{error}</div>
