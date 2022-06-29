@@ -22,11 +22,11 @@
         <div class="option">
           <div>
             <div class="icon"><img src={selected.icon} alt="{selected.name} icon"></div>
-            <div class="name"><h5>{selected.name}</h5></div>
+            <div class="name"><h6>{selected.name}</h6></div>
           </div>
           <div>
-            <div class="valueBTC">{selected.valueBTC}</div>
-            <div class="valueUSD">{selected.valueUSD}</div>
+            <div class="valueBTC">{selected.valueBTC}&nbsp;BTC</div>
+            <div class="valueUSD">{selected.valueUSD}&nbsp;USD</div>
             {#if $cryptoSelectIsOpen}
               <img class="triangle" src="/images/triangle-up.svg" alt="open select list">
             {:else}
@@ -41,11 +41,11 @@
           <div class="option" on:click={() => clickOption(currency)}>
             <div>
               <div class="icon"><img src={currency.icon} alt="{currency.name} icon"></div>
-              <div class="name"><h5>{currency.name}</h5></div>
+              <div class="name"><h6>{currency.name}</h6></div>
             </div>
             <div>
-              <div class="valueBTC">{currency.valueBTC}</div>
-              <div class="valueUSD">{currency.valueUSD}</div>
+              <div class="valueBTC">{currency.valueBTC}&nbsp;BTC</div>
+              <div class="valueUSD">{currency.valueUSD}&nbsp;USD</div>
             </div>
           </div>
         {/each}
@@ -81,11 +81,15 @@
         justify-content: space-between;
         align-items: center;
         border-radius: .3rem;
+        font: var(--font-small-medium);
         div {
           display: flex;
           padding: .5rem 1rem;
+          .name, .valueBTC {
+            font: var(--font-small-semibold);
+          }
           img {
-            max-width: 2rem;
+            width: 2rem;
           }
         };
       }

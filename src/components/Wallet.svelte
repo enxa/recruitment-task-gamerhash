@@ -1,7 +1,3 @@
-<svelte:head>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-</svelte:head>
-
 <script lang="ts">
   import { onMount } from 'svelte'
   import { wallet } from '../app'
