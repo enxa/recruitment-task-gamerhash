@@ -6,9 +6,7 @@
   <header class="rim">
     <slot />
     <section>
-      <div class="title">
-        <img src="/images/Mining text.svg" alt="Mining logo">
-      </div>
+      <div class="title"></div>
       <div class="links">
         {#each $headerLinks as link}
           <a rel="external" href={link.url}>
@@ -23,7 +21,9 @@
         </a>
       </div>
       <div class="arrow">
-        <img src="/images/arrow.svg" alt="arrow pointing down">
+        <a href="#main-content">
+          <img src="/images/arrow.svg" alt="arrow pointing down">
+        </a>
       </div>
     </section>
   </header>
@@ -32,19 +32,26 @@
 <style lang="scss">
   header {
     width: 100%;
-    height: 100vh;
+    min-height: 110vh;
     background: var(--color-woodsmoke2);
     display: grid;
     align-items: center;
     section {
       background: var(--gradient-radial-dark);
       .title {
+        width: 100%;
+        height: 50vh;
         transform: scale(1.1);
         display: grid;
         place-items: center;
-        img {
-          width: 80vw;
-          max-height: 40vh;
+        position: relative;
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          right: 0;
+          background: url('/images/mining-text.svg') no-repeat bottom center / contain;
         }
       }
       .links {
@@ -67,7 +74,7 @@
       }
       .subtitle {
         a {
-          color: var(--color-alabaster);
+          color: var(--color-dovegray);
           text-align: center;
           h6 {
             font-size: 2rem;
@@ -81,7 +88,6 @@
         img {
           width: 2rem;
           height: 1rem;
-          transform: translateY(5rem);
         }
       }
     }

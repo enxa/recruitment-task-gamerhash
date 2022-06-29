@@ -21,6 +21,7 @@
     justify-content: space-between;
     align-items: center;
     background: var(--color-woodsmoke2);
+    z-index: 100;
     img {
       width: 18rem;
       margin: 1.5rem 0;
