@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--color-white: #FFFFFF;
+	--color-alabaster: #F9F9F9;
+	--color-silver: #C1C1C1;
+	--color-oslogray: #8B8D8F;
+	--color-jumbo: #7A7A7B;
+	--color-dovegray: #737373;
+	--color-devegray2: #707070;
+	--color-shark: #2c3138;
+	--color-shark2: #26292E;
+	--color-woodsmoke: #171A1F;
+	--color-woodsmoke2: #181B1F;
+	--color-redribbon: #F41F33;
+	--color-alizarincrimson: #E02B31;
+	--color-crimson: #DD1531;
+	--color-shamrock: #2AD46F;
+	--color-mountainmeadow: #20c763;
+	--color-chinook: #A0DFB9;
+	--color-hintofgreen: #E2FFEE;
+	--color-selectiveyellow: #FBBB00;
+	--color-cornflowerblue: #518EF8;
+	--color-eucalyptus: #28B446;
+	--color-flamingo: #F14336;
+	
+	--font-small-medium: 500 1.4rem/1.8rem 'Rajdhani', sans-serif;
+	--font-small-semibold: 600 1.4rem/1.8rem 'Rajdhani', sans-serif;
+	--font-regular-medium: 500 1.8rem/2.0rem 'Rajdhani', sans-serif;
+	--font-regular-semibold: 600 1.8rem/2.0rem 'Rajdhani', sans-serif;
+	--font-big-semibold: 600 2.4rem/2.9rem 'Rajdhani', sans-serif;
+	--font-big-bold: 500 2.4rem/2.9rem 'Rajdhani', sans-serif;
+	--font-large-semibold: 600 3.2rem/4.1rem 'Rajdhani', sans-serif;
+	--font-large-bold: 700 3.2rem/4.1rem 'Rajdhani', sans-serif;
+	--font-ample-bold: 700 3.6rem/4.0rem 'Rajdhani', sans-serif;
+	--font-huge-bold: 700 50rem/9.0rem 'Rajdhani', sans-serif;
+
+	--gradient-radial-dark: radial-gradient(closest-side at 50% 48%, var(--color-shark) 0%, var(--color-woodsmoke2) 100%) 0% 0% no-repeat padding-box;
+	--gradient-linear-dark: linear-gradient(90deg, var(--color-woodsmoke2) 0%, var(--color-shark) 50%, var(--color-woodsmoke2) 100%);
+}
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	vertical-align: baseline;
+}
+html {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 62.5%;
+	line-height: 1.5;
+}
+body {
+	font: var(--font-regular-medium);
+	color: var(--color-dovegray);
+	background-color: var(--color-alabaster);
+}
+
+h1 { font: var(--font-huge-bold); }
+h2 { font: var(--font-ample-bold); }
+h3 { font: var(--font-large-bold); }
+h4 { font: var(--font-big-bold); }
+h5 { font: var(--font-regular-semibold); }
+h6 { font: var(--font-small-semibold); }
+
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	width: 100%;
+	max-width: 100%;
+}
+table {
+	border-collapse: collapse;
+}
+input, button {
+  font-family: inherit;
+}
+textarea {
+	white-space: revert;
+}
+button {
+	cursor: pointer;
+}
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+@media (min-width: 0px)    { .rim { padding: 0 calc(100vw/60) } }
+@media (min-width: 320px)  { .rim { padding: 0 calc(100vw/48) } }
+@media (min-width: 640px)  { .rim { padding: 0 calc(100vw/36) } }
+@media (min-width: 960px)  { .rim { padding: 0 calc(100vw/24) } }
+@media (min-width: 1280px) { .rim { padding: 0 calc(100vw/12) } }
+@media (min-width: 1600px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 1920px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 2240px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 2560px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 2880px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 3200px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 3520px) { .rim { padding: 0 calc(100vw/6) } }
+@media (min-width: 3840px) { .rim { padding: 0 calc(100vw/6) } }
