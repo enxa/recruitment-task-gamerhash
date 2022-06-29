@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { headerLinks } from '../app'
 </script>
 
@@ -59,12 +59,23 @@
           display: flex;
           gap: 2rem;
           color: var(--color-dovegray);
+          transition: .4s color;
+          height: 100%;
+          z-index: 10;
+          transition: .4s color;
+          &:hover {
+            color: var(--color-alabaster);
+          }
+          &:hover img {
+            filter: brightness(2);
+          }
           h3 {
             font: var(--font-large-semibold);
           }
           img {
             width: 4rem;
             height: 4rem;
+            transition: .4s filter;
           }
         }
         @media (min-width: 1280px) {
@@ -76,6 +87,10 @@
         a {
           color: var(--color-dovegray);
           text-align: center;
+          transition: .4s color;
+          &:hover {
+            color: var(--color-alabaster);
+          }
           h6 {
             font-size: 2rem;
             margin: 5rem;
@@ -85,6 +100,10 @@
       .arrow {
         display: flex;
         justify-content: center;
+        transition: .8s transform ease-in-out;
+        &:hover {
+          transform: translateY(.2rem);
+        }
         img {
           width: 2rem;
           height: 1rem;

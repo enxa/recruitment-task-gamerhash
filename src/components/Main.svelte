@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { gamercoinSection } from '../app'
 </script>
 
@@ -9,12 +9,12 @@
     </section>
     <section class="gamercoin">
       <h2>{$gamercoinSection.header}</h2>
-      <p>{$gamercoinSection.body}</p>
+      <p>{@html $gamercoinSection.body}</p>
       <h5>{$gamercoinSection.subheader}</h5>
     </section>
     <section class="crypto">
       <h2>{$gamercoinSection.header}</h2>
-      <p>{$gamercoinSection.body}</p>
+      <p>{@html $gamercoinSection.body}</p>
       <h5>{$gamercoinSection.subheader}</h5>
       <slot name="crypto" />
     </section>

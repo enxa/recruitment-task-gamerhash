@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { slide } from 'svelte/transition'
   import { onMount } from 'svelte'
   import { wallet } from '../app'
   
@@ -23,7 +24,7 @@
         <button on:click={copyText}><img src="/images/paste.svg" alt="metamask logo"></button>
       </div>
       {#if copied}
-        <div class="copy-message">Copied!</div>
+        <div class="copy-message" transition:slide>Copied!</div>
       {/if}
     </div>
     <div class="metamask">
@@ -51,9 +52,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        input, button {
+        &:hover input {
+          color: var(--color-alabaster);
+        }
+        &:hover img {
+          filter: brightness(2);
+        }
+        input, button, img {
           background: transparent;
-          padding: .5rem;
+          padding: .25rem;
+          transition: .4s all ease-in-out;
         }
         input {
           font: var(--font-regular-semibold);
@@ -82,6 +90,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: .4s all ease-in-out;
+        &:hover {
+          color: var(--color-shark);
+          background: var(--color-alabaster);
+        }
       }
     }
   }

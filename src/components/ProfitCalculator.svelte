@@ -100,13 +100,25 @@
         border-radius: 1rem;
         padding: 1.5rem 2rem;
         margin-top: 8rem;
+        transition: .4s background ease-in-out;
+        &:hover {
+          background: var(--color-alabaster);
+        }
+        &:hover h5 {
+          color: var(--color-woodsmoke);
+        }
+        &:hover img {
+          filter: invert(100%)
+        }
         img {
           max-width: 6rem;
+          transition: .4s filter ease-in-out;
         }
         h5 {
           color: var(--color-alabaster);
           text-align: left;
           padding-left: 2rem;
+          transition: .4s color ease-in-out;
         }
       }
     }
