@@ -1,6 +1,11 @@
-<script lang="ts">
+<script>
+  import { browser } from '$app/env';
   import { headerLinks } from '../app.js'
   import { animateInViewport } from '../animations/animateInViewport.js'
+
+  let scrollToNextSection = () => {
+    if (browser) scrollTo(0, window.innerHeight)
+  }
 </script>
 
 <template>
@@ -22,7 +27,7 @@
         </a>
       </div>
       <div class="arrow">
-        <a href="#main-content">
+        <a href="#main-content" on:click={scrollToNextSection}>
           <img src="/images/arrow.svg" alt="arrow pointing down">
         </a>
       </div>

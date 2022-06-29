@@ -1,8 +1,6 @@
 import { viewport } from '$lib/viewport.js'
-import { tick } from 'svelte'
 
 export const animateInViewport = (node) => {
-  console.log(node.textContent)
   let enterViewport = () => {
     node.setAttribute('style', `
       clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
