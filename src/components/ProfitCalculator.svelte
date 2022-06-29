@@ -53,6 +53,7 @@
           padding: 3rem;
           display: grid;
           place-items: center;
+          margin: auto;
           position: relative;
           border-radius: 1rem;
           cursor: pointer;
