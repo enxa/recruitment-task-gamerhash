@@ -22,7 +22,7 @@ export const headerLinks = writable([
 
 export const gamercoinSection = writable({
   header: 'We are creating GamerCoin (GHX) - native token for gamers!',
-  body: 'GamerCoin is a token of GamerHash platform - it\'s the last puzzle of gaming ecosystem and fuel which makes 500.00 users life easier. Gamers will have many ways to earn GHX trough mining or entertainment on the platform. Keeping tokens in the wallet will bring many benefits & spending GHX in the Marketplace will open special offers',
+  body: 'GamerCoin is a token of GamerHash platform - it\'s the last puzzle of gaming ecosystem and fuel which makes 500.00 users life easier.<br>Gamers will have many ways to earn GHX trough mining or entertainment on the platform. Keeping tokens in the wallet will bring many benefits & spending GHX in the Marketplace will open special offers',
   subheader: 'It\'s a game changer for gaming generation!'
 })
 

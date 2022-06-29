@@ -34,6 +34,10 @@
       padding: 1.5rem 2rem;
       margin: 1.5rem 1rem;
       background: transparent;
+      transition: .4s border ease-in-out;
+      &:hover {
+        border: .1px solid var(--color-alabaster);
+      }
     }
   }
 </style>

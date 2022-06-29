@@ -1,22 +1,23 @@
 <script lang="ts">
   import { devices } from '../app.js'
+  import { animateInViewport } from '../animations/animateInViewport.js'
 </script>
 
 <template>
   <section class="profitabilty-calculator rim">
     <div>
-      <h2>Profitability calculator</h2>
-      <h5>You earn bitcoins. When BTC exchange rate goes up, your profit automatically increases.</h5>
+      <h2 use:animateInViewport>Profitability calculator</h2>
+      <h5 use:animateInViewport>You earn bitcoins. When BTC exchange rate goes up, your profit automatically increases.</h5>
       <div class="cards">
         {#each $devices as device}
           <div class="card">
-            <h5>{device.name}</h5>
+            <h5 use:animateInViewport>{device.name}</h5>
             <img src={device.icon} alt="{device.name} icon">
-            <h4>${device.value.toLocaleString()}</h4>
+            <h4 use:animateInViewport>${device.value.toLocaleString()}</h4>
           </div>
         {/each}
       </div>
-      <h5>Crypto exchange rates are independent of GamerHash operations, the estimation is purely for illustrative purposes</h5>
+      <h5 use:animateInViewport>Crypto exchange rates are independent of GamerHash operations, the estimation is purely for illustrative purposes</h5>
       <button>
         <img src="/images/art.svg" alt="art icon">
         <h5>Check how much your<br>setup will earn</h5>
@@ -100,13 +101,25 @@
         border-radius: 1rem;
         padding: 1.5rem 2rem;
         margin-top: 8rem;
+        transition: .4s background ease-in-out;
+        &:hover {
+          background: var(--color-alabaster);
+        }
+        &:hover h5 {
+          color: var(--color-woodsmoke);
+        }
+        &:hover img {
+          filter: invert(100%)
+        }
         img {
           max-width: 6rem;
+          transition: .4s filter ease-in-out;
         }
         h5 {
           color: var(--color-alabaster);
           text-align: left;
           padding-left: 2rem;
+          transition: .4s color ease-in-out;
         }
       }
     }

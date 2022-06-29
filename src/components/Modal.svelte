@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fade } from 'svelte/transition'
   import { modalIsOpen } from '../app.js'
   
   export let modalTitle: string = ""
@@ -6,7 +7,7 @@
 
 <template>
   {#if $modalIsOpen}
-    <section class="modal-outer" on:click|self={() => $modalIsOpen = false}>
+    <section class="modal-outer" on:click|self={() => $modalIsOpen = false} transition:fade>
       <div>
         <h3>{modalTitle}</h3>
         <div class="modal-inner">

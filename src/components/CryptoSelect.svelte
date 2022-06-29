@@ -1,6 +1,6 @@
 <script lang="ts">
+  import { slide } from 'svelte/transition'
   import { clickOutside } from '../lib/clickOutside.js'
-
   import { crypto, cryptoSelectIsOpen } from '../app.js'
 
   let selected: { icon: string, name: string, valueBTC: number, valueUSD: number } = $crypto[0]
@@ -17,7 +17,8 @@
 
 <template>
   <section class="crypto-select">
-    <div class=select use:clickOutside on:click-outside={() => $cryptoSelectIsOpen = false}>
+    <div class=select use:clickOutside on:click-outside={() => $cryptoSelectIsOpen = false} 
+         style="box-shadow: {$cryptoSelectIsOpen ? '0rem .2rem 1rem var(--color-silver)' : ''}">
       <div class="selected" on:click={() => clickSelect()}>
         <div class="option">
           <div>
@@ -38,7 +39,7 @@
     
       {#if $cryptoSelectIsOpen}
         {#each $crypto as currency}
-          <div class="option" on:click={() => clickOption(currency)}>
+          <div class="option" on:click={() => clickOption(currency)} transition:slide>
             <div>
               <div class="icon"><img src={currency.icon} alt="{currency.name} icon"></div>
               <div class="name"><h6>{currency.name}</h6></div>
@@ -67,21 +68,30 @@
       position: absolute;
       border-radius: .3rem;
       background: var(--color-white);
-      box-shadow: 0rem .2rem 1rem var(--color-silver);
+      transition: .4s all ease-in-out;
       .selected {
         border: 1px solid var(--color-silver);
         border-radius: .3rem;
+        transition: .4s border ease-in-out;
+        &:hover {
+          border: 1px solid var(--color-shark);
+        }
         .triangle {
           max-width: 1rem;
           margin: 0 1rem;
         }
       }
       .option {
+        font: var(--font-small-medium);
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-radius: .3rem;
-        font: var(--font-small-medium);
+        color: var(--color-shark);
+        transition: .4s background ease-in-out;
+        &:hover {
+          background: var(--color-silver);
+        }
         div {
           display: flex;
           padding: .5rem 1rem;

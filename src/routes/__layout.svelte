@@ -2,6 +2,6 @@
 	import '../app.css';
 </script>
 
-<template>
+<template use:smoothSite>
 	<slot />
 </template>
